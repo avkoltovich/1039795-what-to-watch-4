@@ -1,9 +1,8 @@
 import React from 'react';
-
+import PropTypes from "prop-types";
 
 
 const Main = (props) => {
-  // eslint-disable-next-line react/prop-types
   const {moviesTitles, movieTitle, movieGenre, movieYear} = props;
 
   return (
@@ -92,14 +91,14 @@ const Main = (props) => {
             </li>
           </ul>
           <div className="catalog__movies-list">
-            {moviesTitles.map((movieTitle, index) => {
+            {moviesTitles.map((item, index) => {
               return (
-                <article key={movieTitle + index} className="small-movie-card catalog__movies-card">
+                <article key={item + index} className="small-movie-card catalog__movies-card">
                   <div className="small-movie-card__image">
-                    <img src="img/johnny-english.jpg" alt={movieTitle} width={280} height={175} />
+                    <img src="img/johnny-english.jpg" alt={item} width={280} height={175} />
                   </div>
                   <h3 className="small-movie-card__title">
-                    <a className="small-movie-card__link" href="movie-page.html">{movieTitle}</a>
+                    <a className="small-movie-card__link" href="movie-page.html">{item}</a>
                   </h3>
                 </article>
               );
@@ -125,5 +124,15 @@ const Main = (props) => {
     </React.Fragment>
   );
 };
+
+Main.propTypes = {
+  moviesTitles: PropTypes.arrayOf(
+      PropTypes.string.isRequired
+  ).isRequired,
+  movieTitle: PropTypes.string.isRequired,
+  movieGenre: PropTypes.string.isRequired,
+  movieYear: PropTypes.string.isRequired
+};
+
 
 export default Main;
