@@ -25,7 +25,6 @@ App.propTypes = {
   movieTitle: PropTypes.string.isRequired,
   movieGenre: PropTypes.string.isRequired,
   movieYear: PropTypes.string.isRequired,
-  onTitleLinkClick: PropTypes.func.isRequired
 };
 
 

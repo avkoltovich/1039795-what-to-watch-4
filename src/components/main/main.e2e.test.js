@@ -1,6 +1,8 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import Enzyme, {shallow} from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
 import Main from "./main.jsx";
+
 
 const MOVIES = [
   `Fantastic Beasts: The Crimes of Grindelwald`,
@@ -31,17 +33,25 @@ const Movie = {
   YEAR: `2014`,
 };
 
-describe(`Main`, () => {
-  it(`Should Main render correctly`, () => {
-    const tree = renderer
-      .create(<Main
+Enzyme.configure({
+  adapter: new Adapter(),
+});
+
+it(`Should title link be clicked`, () => {
+  const titleLinkHandler = jest.fn();
+
+  const mainComponent = shallow(
+      <Main
         movies={MOVIES}
         movieTitle={Movie.TITLE}
         movieGenre={Movie.GENRE}
         movieYear={Movie.YEAR}
-        onTitleLinkClick={() => {}} />)
-      .toJSON();
+        onTitleLinkClick={titleLinkHandler} />
+  );
 
-    expect(tree).toMatchSnapshot();
-  });
+  const mainComponentLinks = mainComponent.find(`.small-movie-card__link`);
+
+  mainComponentLinks.forEach((link) => link.simulate(`click`));
+
+  expect(titleLinkHandler.mock.calls.length).toBe(MOVIES.length);
 });
