@@ -1,7 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/app/app.jsx';
-
+import React from "react";
+import renderer from "react-test-renderer";
+import Main from "./main.jsx";
 
 const MOVIES = [
   `Fantastic Beasts: The Crimes of Grindelwald`,
@@ -32,11 +31,17 @@ const Movie = {
   YEAR: `2014`,
 };
 
-ReactDOM.render(
-    <App
-      movies={MOVIES}
-      movieTitle={Movie.TITLE}
-      movieGenre={Movie.GENRE}
-      movieYear={Movie.YEAR} />,
-    document.querySelector(`#root`)
-);
+describe(`Main`, () => {
+  it(`Should Main render correctly`, () => {
+    const tree = renderer
+      .create(<Main
+        movies={MOVIES}
+        movieTitle={Movie.TITLE}
+        movieGenre={Movie.GENRE}
+        movieYear={Movie.YEAR}
+        onTitleLinkClick={() => {}} />)
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+});

@@ -3,25 +3,28 @@ import PropTypes from "prop-types";
 import Main from '../main/main.jsx';
 
 
+const titleLinkHandler = () => {};
+
 const App = (props) => {
-  const {moviesTitles, movieTitle, movieGenre, movieYear} = props;
+  const {movies, movieTitle, movieGenre, movieYear} = props;
 
   return (
     <Main
-      moviesTitles={moviesTitles}
+      movies={movies}
       movieTitle={movieTitle}
       movieGenre={movieGenre}
-      movieYear={movieYear} />
+      movieYear={movieYear}
+      onTitleLinkClick={titleLinkHandler} />
   );
 };
 
 App.propTypes = {
-  moviesTitles: PropTypes.arrayOf(
+  movies: PropTypes.arrayOf(
       PropTypes.string.isRequired
   ).isRequired,
   movieTitle: PropTypes.string.isRequired,
   movieGenre: PropTypes.string.isRequired,
-  movieYear: PropTypes.string.isRequired
+  movieYear: PropTypes.string.isRequired,
 };
 
 
