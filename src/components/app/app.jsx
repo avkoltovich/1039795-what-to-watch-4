@@ -4,11 +4,11 @@ import Main from '../main/main.jsx';
 
 
 const App = (props) => {
-  const {moviesTitles, movieTitle, movieGenre, movieYear} = props;
+  const {movies, movieTitle, movieGenre, movieYear} = props;
 
   return (
     <Main
-      moviesTitles={moviesTitles}
+      movies={movies}
       movieTitle={movieTitle}
       movieGenre={movieGenre}
       movieYear={movieYear} />
@@ -16,7 +16,7 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  moviesTitles: PropTypes.arrayOf(
+  movies: PropTypes.arrayOf(
       PropTypes.string.isRequired
   ).isRequired,
   movieTitle: PropTypes.string.isRequired,

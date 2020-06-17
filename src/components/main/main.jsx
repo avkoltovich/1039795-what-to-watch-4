@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 
 const Main = (props) => {
-  const {moviesTitles, movieTitle, movieGenre, movieYear} = props;
+  const {movies, movieTitle, movieGenre, movieYear} = props;
 
   return (
     <React.Fragment>
@@ -91,7 +91,7 @@ const Main = (props) => {
             </li>
           </ul>
           <div className="catalog__movies-list">
-            {moviesTitles.map((item, index) => {
+            {movies.map((item, index) => {
               return (
                 <article key={item + index} className="small-movie-card catalog__movies-card">
                   <div className="small-movie-card__image">
@@ -126,7 +126,7 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  moviesTitles: PropTypes.arrayOf(
+  movies: PropTypes.arrayOf(
       PropTypes.string.isRequired
   ).isRequired,
   movieTitle: PropTypes.string.isRequired,

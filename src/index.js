@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app/app.jsx';
 
-const moviesTitles = [
+const MOVIES = [
   `Fantastic Beasts: The Crimes of Grindelwald`,
   `Bohemian Rhapsody`,
   `Macbeth`,
@@ -33,7 +33,7 @@ const Movie = {
 
 ReactDOM.render(
     <App
-      moviesTitles={moviesTitles}
+      movies={MOVIES}
       movieTitle={Movie.TITLE}
       movieGenre={Movie.GENRE}
       movieYear={Movie.YEAR} />,
