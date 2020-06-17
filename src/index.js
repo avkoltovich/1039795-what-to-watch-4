@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app/app.jsx';
 
+
 const MOVIES = [
   `Fantastic Beasts: The Crimes of Grindelwald`,
   `Bohemian Rhapsody`,
