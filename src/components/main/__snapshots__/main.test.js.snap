@@ -266,7 +266,7 @@ Array [
             <img
               alt="Fantastic Beasts: The Crimes of Grindelwald"
               height={175}
-              src="img/johnny-english.jpg"
+              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
               width={280}
             />
           </div>
@@ -291,7 +291,7 @@ Array [
             <img
               alt="Bohemian Rhapsody"
               height={175}
-              src="img/johnny-english.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width={280}
             />
           </div>
@@ -314,34 +314,9 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Macbeth"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Macbeth
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
               alt="Aviator"
               height={175}
-              src="img/johnny-english.jpg"
+              src="img/aviator.jpg"
               width={280}
             />
           </div>
@@ -364,9 +339,9 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="We need to talk about Kevin"
+              alt="Shutter Island"
               height={175}
-              src="img/johnny-english.jpg"
+              src="img/shutter-island.jpg"
               width={280}
             />
           </div>
@@ -378,7 +353,7 @@ Array [
               href="movie-page.html"
               onClick={[Function]}
             >
-              We need to talk about Kevin
+              Shutter Island
             </a>
           </h3>
         </article>
@@ -389,9 +364,9 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="What We Do in the Shadows"
+              alt="Pulp Fiction"
               height={175}
-              src="img/johnny-english.jpg"
+              src="img/pulp-fiction.jpg"
               width={280}
             />
           </div>
@@ -403,7 +378,7 @@ Array [
               href="movie-page.html"
               onClick={[Function]}
             >
-              What We Do in the Shadows
+              Pulp Fiction
             </a>
           </h3>
         </article>
@@ -414,9 +389,9 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Revenant"
+              alt="No Country for Old Men"
               height={175}
-              src="img/johnny-english.jpg"
+              src="img/no-country-for-old-men.jpg"
               width={280}
             />
           </div>
@@ -428,7 +403,32 @@ Array [
               href="movie-page.html"
               onClick={[Function]}
             >
-              Revenant
+              No Country for Old Men
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+        >
+          <div
+            className="small-movie-card__image"
+          >
+            <img
+              alt="Snatch"
+              height={175}
+              src="img/snatch.jpg"
+              width={280}
+            />
+          </div>
+          <h3
+            className="small-movie-card__title"
+          >
+            <a
+              className="small-movie-card__link"
+              href="movie-page.html"
+              onClick={[Function]}
+            >
+              Snatch
             </a>
           </h3>
         </article>
@@ -454,306 +454,6 @@ Array [
               onClick={[Function]}
             >
               Johnny English
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Shutter Island"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Shutter Island
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Pulp Fiction"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Pulp Fiction
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="No Country for Old Men"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              No Country for Old Men
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Snatch"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Snatch
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Moonrise Kingdom"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Moonrise Kingdom
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Seven Years in Tibet"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Seven Years in Tibet
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Midnight Special"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Midnight Special
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="War of the Worlds"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              War of the Worlds
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Dardjeeling Limited"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Dardjeeling Limited
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Orlando"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Orlando
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Mindhunter"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Mindhunter
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Midnight Special"
-              height={175}
-              src="img/johnny-english.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Midnight Special
             </a>
           </h3>
         </article>
