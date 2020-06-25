@@ -4,13 +4,13 @@ import React from 'react';
 
 
 const Main = (props) => {
-  const {movies, selectedMovie, onTitleLinkClick} = props;
+  const {movies, promoMovie, onTitleLinkClick} = props;
 
   return (
     <React.Fragment>
       <section className="movie-card">
         <div className="movie-card__bg">
-          <img src="img/bg-the-grand-budapest-hotel.jpg" alt={selectedMovie.TITLE} />
+          <img src="img/bg-the-grand-budapest-hotel.jpg" alt={promoMovie.TITLE} />
         </div>
         <h1 className="visually-hidden">WTW</h1>
         <header className="page-header movie-card__head">
@@ -30,13 +30,13 @@ const Main = (props) => {
         <div className="movie-card__wrap">
           <div className="movie-card__info">
             <div className="movie-card__poster">
-              <img src="img/the-grand-budapest-hotel-poster.jpg" alt={`${selectedMovie.TITLE} poster`} width={218} height={327} />
+              <img src="img/the-grand-budapest-hotel-poster.jpg" alt={`${promoMovie.TITLE} poster`} width={218} height={327} />
             </div>
             <div className="movie-card__desc">
-              <h2 className="movie-card__title">{selectedMovie.TITLE}</h2>
+              <h2 className="movie-card__title">{promoMovie.TITLE}</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">{selectedMovie.GENRE}</span>
-                <span className="movie-card__year">{selectedMovie.YEAR}</span>
+                <span className="movie-card__genre">{promoMovie.GENRE}</span>
+                <span className="movie-card__year">{promoMovie.YEAR}</span>
               </p>
               <div className="movie-card__buttons">
                 <button className="btn btn--play movie-card__button" type="button">
@@ -125,7 +125,7 @@ Main.propTypes = {
         image: PropTypes.string.isRequired,
       }).isRequired
   ).isRequired,
-  selectedMovie: PropTypes.shape({
+  promoMovie: PropTypes.shape({
     TITLE: PropTypes.string.isRequired,
     GENRE: PropTypes.string.isRequired,
     YEAR: PropTypes.string.isRequired,

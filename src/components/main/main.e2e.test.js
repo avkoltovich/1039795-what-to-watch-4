@@ -39,7 +39,7 @@ const MOVIES = [
   }
 ];
 
-const SelectedMovie = {
+const PromoMovie = {
   TITLE: `The Grand Budapest Hotel`,
   GENRE: `Drama`,
   YEAR: `2014`,
@@ -56,7 +56,7 @@ describe(`Main e2e test`, () => {
     const mainComponent = mount(
         <Main
           movies={MOVIES}
-          selectedMovie={SelectedMovie}
+          promoMovie={PromoMovie}
           onTitleLinkClick={titleLinkHandler} />
     );
 

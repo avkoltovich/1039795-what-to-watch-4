@@ -37,7 +37,7 @@ const MOVIES = [
   }
 ];
 
-const SelectedMovie = {
+const PromoMovie = {
   TITLE: `The Grand Budapest Hotel`,
   GENRE: `Drama`,
   YEAR: `2014`,
@@ -48,7 +48,7 @@ describe(`App`, () => {
     const tree = renderer
       .create(<App
         movies={MOVIES}
-        selectedMovie={SelectedMovie} />)
+        promoMovie={PromoMovie} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();

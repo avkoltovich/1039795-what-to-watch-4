@@ -6,12 +6,12 @@ import Main from '../main/main.jsx';
 const titleLinkHandler = () => {};
 
 const App = (props) => {
-  const {movies, selectedMovie} = props;
+  const {movies, promoMovie} = props;
 
   return (
     <Main
       movies={movies}
-      selectedMovie={selectedMovie}
+      promoMovie={promoMovie}
       onTitleLinkClick={titleLinkHandler} />
   );
 };
@@ -23,7 +23,7 @@ App.propTypes = {
         image: PropTypes.string.isRequired,
       }).isRequired
   ).isRequired,
-  selectedMovie: PropTypes.shape({
+  promoMovie: PropTypes.shape({
     TITLE: PropTypes.string.isRequired,
     GENRE: PropTypes.string.isRequired,
     YEAR: PropTypes.string.isRequired,

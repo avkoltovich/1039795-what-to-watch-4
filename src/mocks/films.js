@@ -33,10 +33,10 @@ const MOVIES = [
   }
 ];
 
-const SelectedMovie = {
+const PromoMovie = {
   TITLE: `The Grand Budapest Hotel`,
   GENRE: `Drama`,
   YEAR: `2014`,
 };
 
-export {MOVIES, SelectedMovie};
+export {MOVIES, PromoMovie};
