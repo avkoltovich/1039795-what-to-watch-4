@@ -94,7 +94,7 @@ const Main = (props) => {
           <div className="catalog__movies-list">
             {movies.map((item, index) => {
               return (
-                <article key={item + index} className="small-movie-card catalog__movies-card">
+                <article key={item.title + index} className="small-movie-card catalog__movies-card">
                   <div className="small-movie-card__image">
                     <img src={item.image} alt={item.title} width={280} height={175} />
                   </div>
