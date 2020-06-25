@@ -1,5 +1,5 @@
 import React from "react";
-import Enzyme, {shallow} from "enzyme";
+import Enzyme, {mount} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Main from "./main.jsx";
 
@@ -53,7 +53,7 @@ describe(`Main e2e test`, () => {
   it(`Should title link be clicked`, () => {
     const titleLinkHandler = jest.fn();
 
-    const mainComponent = shallow(
+    const mainComponent = mount(
         <Main
           movies={MOVIES}
           selectedMovie={SelectedMovie}
