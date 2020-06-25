@@ -49,19 +49,21 @@ Enzyme.configure({
   adapter: new Adapter(),
 });
 
-it(`Should title link be clicked`, () => {
-  const titleLinkHandler = jest.fn();
+describe(`Main e2e test`, () => {
+  it(`Should title link be clicked`, () => {
+    const titleLinkHandler = jest.fn();
 
-  const mainComponent = shallow(
-      <Main
-        movies={MOVIES}
-        selectedMovie={SelectedMovie}
-        onTitleLinkClick={titleLinkHandler} />
-  );
+    const mainComponent = shallow(
+        <Main
+          movies={MOVIES}
+          selectedMovie={SelectedMovie}
+          onTitleLinkClick={titleLinkHandler} />
+    );
 
-  const mainComponentLinks = mainComponent.find(`.small-movie-card__link`);
+    const mainComponentLinks = mainComponent.find(`.small-movie-card__link`);
 
-  mainComponentLinks.forEach((link) => link.simulate(`click`));
+    mainComponentLinks.forEach((link) => link.simulate(`click`));
 
-  expect(titleLinkHandler.mock.calls.length).toBe(MOVIES.length);
+    expect(titleLinkHandler.mock.calls.length).toBe(MOVIES.length);
+  });
 });
