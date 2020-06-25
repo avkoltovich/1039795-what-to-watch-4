@@ -1,33 +1,45 @@
 import React from "react";
-import Enzyme, {shallow} from "enzyme";
+import Enzyme, {mount} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Main from "./main.jsx";
 
 
 const MOVIES = [
-  `Fantastic Beasts: The Crimes of Grindelwald`,
-  `Bohemian Rhapsody`,
-  `Macbeth`,
-  `Aviator`,
-  `We need to talk about Kevin`,
-  `What We Do in the Shadows`,
-  `Revenant`,
-  `Johnny English`,
-  `Shutter Island`,
-  `Pulp Fiction`,
-  `No Country for Old Men`,
-  `Snatch`,
-  `Moonrise Kingdom`,
-  `Seven Years in Tibet`,
-  `Midnight Special`,
-  `War of the Worlds`,
-  `Dardjeeling Limited`,
-  `Orlando`,
-  `Mindhunter`,
-  `Midnight Special`
+  {
+    title: `Fantastic Beasts: The Crimes of Grindelwald`,
+    image: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+  },
+  {
+    title: `Bohemian Rhapsody`,
+    image: `img/bohemian-rhapsody.jpg`
+  },
+  {
+    title: `Aviator`,
+    image: `img/aviator.jpg`
+  },
+  {
+    title: `Shutter Island`,
+    image: `img/shutter-island.jpg`
+  },
+  {
+    title: `Pulp Fiction`,
+    image: `img/pulp-fiction.jpg`
+  },
+  {
+    title: `No Country for Old Men`,
+    image: `img/no-country-for-old-men.jpg`
+  },
+  {
+    title: `Snatch`,
+    image: `img/snatch.jpg`
+  },
+  {
+    title: `Johnny English`,
+    image: `img/johnny-english.jpg`
+  }
 ];
 
-const Movie = {
+const PromoMovie = {
   TITLE: `The Grand Budapest Hotel`,
   GENRE: `Drama`,
   YEAR: `2014`,
@@ -37,21 +49,21 @@ Enzyme.configure({
   adapter: new Adapter(),
 });
 
-it(`Should title link be clicked`, () => {
-  const titleLinkHandler = jest.fn();
+describe(`Main e2e test`, () => {
+  it(`Should title link be clicked`, () => {
+    const titleLinkHandler = jest.fn();
 
-  const mainComponent = shallow(
-      <Main
-        movies={MOVIES}
-        movieTitle={Movie.TITLE}
-        movieGenre={Movie.GENRE}
-        movieYear={Movie.YEAR}
-        onTitleLinkClick={titleLinkHandler} />
-  );
+    const mainComponent = mount(
+        <Main
+          movies={MOVIES}
+          promoMovie={PromoMovie}
+          onTitleLinkClick={titleLinkHandler} />
+    );
 
-  const mainComponentLinks = mainComponent.find(`.small-movie-card__link`);
+    const mainComponentLinks = mainComponent.find(`.small-movie-card__link`);
 
-  mainComponentLinks.forEach((link) => link.simulate(`click`));
+    mainComponentLinks.forEach((link) => link.simulate(`click`));
 
-  expect(titleLinkHandler.mock.calls.length).toBe(MOVIES.length);
+    expect(titleLinkHandler.mock.calls.length).toBe(MOVIES.length);
+  });
 });

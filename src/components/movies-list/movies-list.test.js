@@ -1,6 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./app.jsx";
+import MoviesList from "./movies-list.jsx";
+
 
 const MOVIES = [
   {
@@ -37,18 +38,12 @@ const MOVIES = [
   }
 ];
 
-const PromoMovie = {
-  TITLE: `The Grand Budapest Hotel`,
-  GENRE: `Drama`,
-  YEAR: `2014`,
-};
-
-describe(`App`, () => {
-  it(`Should App render correctly`, () => {
+describe(`MoviesList`, () => {
+  it(`Should MoviesList render correctly`, () => {
     const tree = renderer
-      .create(<App
+      .create(<MoviesList
         movies={MOVIES}
-        promoMovie={PromoMovie} />)
+        onTitleLinkClick={() => {}} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();

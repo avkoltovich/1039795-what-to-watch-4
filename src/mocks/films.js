@@ -1,7 +1,3 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import App from "./app.jsx";
-
 const MOVIES = [
   {
     title: `Fantastic Beasts: The Crimes of Grindelwald`,
@@ -43,14 +39,4 @@ const PromoMovie = {
   YEAR: `2014`,
 };
 
-describe(`App`, () => {
-  it(`Should App render correctly`, () => {
-    const tree = renderer
-      .create(<App
-        movies={MOVIES}
-        promoMovie={PromoMovie} />)
-      .toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-});
+export {MOVIES, PromoMovie};

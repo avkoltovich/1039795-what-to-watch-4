@@ -6,25 +6,28 @@ import Main from '../main/main.jsx';
 const titleLinkHandler = () => {};
 
 const App = (props) => {
-  const {movies, movieTitle, movieGenre, movieYear} = props;
+  const {movies, promoMovie} = props;
 
   return (
     <Main
       movies={movies}
-      movieTitle={movieTitle}
-      movieGenre={movieGenre}
-      movieYear={movieYear}
+      promoMovie={promoMovie}
       onTitleLinkClick={titleLinkHandler} />
   );
 };
 
 App.propTypes = {
   movies: PropTypes.arrayOf(
-      PropTypes.string.isRequired
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+      }).isRequired
   ).isRequired,
-  movieTitle: PropTypes.string.isRequired,
-  movieGenre: PropTypes.string.isRequired,
-  movieYear: PropTypes.string.isRequired,
+  promoMovie: PropTypes.shape({
+    TITLE: PropTypes.string.isRequired,
+    GENRE: PropTypes.string.isRequired,
+    YEAR: PropTypes.string.isRequired,
+  }).isRequired
 };
 
 
