@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 
 
 const Main = (props) => {
-  const {movies, movieTitle, movieGenre, movieYear, onTitleLinkClick} = props;
+  const {movies, selectedMovie, onTitleLinkClick} = props;
 
   return (
     <React.Fragment>
       <section className="movie-card">
         <div className="movie-card__bg">
-          <img src="img/bg-the-grand-budapest-hotel.jpg" alt={movieTitle} />
+          <img src="img/bg-the-grand-budapest-hotel.jpg" alt={selectedMovie.TITLE} />
         </div>
         <h1 className="visually-hidden">WTW</h1>
         <header className="page-header movie-card__head">
@@ -29,13 +29,13 @@ const Main = (props) => {
         <div className="movie-card__wrap">
           <div className="movie-card__info">
             <div className="movie-card__poster">
-              <img src="img/the-grand-budapest-hotel-poster.jpg" alt={`${movieTitle} poster`} width={218} height={327} />
+              <img src="img/the-grand-budapest-hotel-poster.jpg" alt={`${selectedMovie.TITLE} poster`} width={218} height={327} />
             </div>
             <div className="movie-card__desc">
-              <h2 className="movie-card__title">{movieTitle}</h2>
+              <h2 className="movie-card__title">{selectedMovie.TITLE}</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">{movieGenre}</span>
-                <span className="movie-card__year">{movieYear}</span>
+                <span className="movie-card__genre">{selectedMovie.GENRE}</span>
+                <span className="movie-card__year">{selectedMovie.YEAR}</span>
               </p>
               <div className="movie-card__buttons">
                 <button className="btn btn--play movie-card__button" type="button">
@@ -96,7 +96,7 @@ const Main = (props) => {
               return (
                 <article key={item + index} className="small-movie-card catalog__movies-card">
                   <div className="small-movie-card__image">
-                    <img src="img/johnny-english.jpg" alt={item} width={280} height={175} />
+                    <img src={item.image} alt={item.title} width={280} height={175} />
                   </div>
                   <h3 className="small-movie-card__title">
                     <a
@@ -104,7 +104,7 @@ const Main = (props) => {
                       href="movie-page.html"
                       onClick={onTitleLinkClick}
                     >
-                      {item}
+                      {item.title}
                     </a>
                   </h3>
                 </article>
@@ -135,11 +135,16 @@ const Main = (props) => {
 
 Main.propTypes = {
   movies: PropTypes.arrayOf(
-      PropTypes.string.isRequired
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+      }).isRequired
   ).isRequired,
-  movieTitle: PropTypes.string.isRequired,
-  movieGenre: PropTypes.string.isRequired,
-  movieYear: PropTypes.string.isRequired,
+  selectedMovie: PropTypes.shape({
+    TITLE: PropTypes.string.isRequired,
+    GENRE: PropTypes.string.isRequired,
+    YEAR: PropTypes.string.isRequired,
+  }).isRequired,
   onTitleLinkClick: PropTypes.func.isRequired
 };
 
