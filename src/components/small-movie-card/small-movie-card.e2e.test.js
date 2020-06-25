@@ -4,7 +4,7 @@ import Adapter from "enzyme-adapter-react-16";
 import SmallMovieCard from "./small-movie-card.jsx";
 
 
-const movie = {
+const Movie = {
   title: `Fantastic Beasts: The Crimes of Grindelwald`,
   image: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
 };
@@ -20,7 +20,7 @@ describe(`SmallMovieCard e2e test`, () => {
 
     const mainComponent = shallow(
         <SmallMovieCard
-          movie={movie}
+          movie={Movie}
           onTitleLinkClick={() => {}}
           onCardHover={onCardHover} />
     );
@@ -28,10 +28,10 @@ describe(`SmallMovieCard e2e test`, () => {
     const movieCards = mainComponent.find(`.small-movie-card`);
 
     movieCards.forEach((movieCard) => {
-      movieCard.simulate(`mouseover`, movie);
+      movieCard.simulate(`mouseover`, Movie);
     });
 
     expect(onCardHover).toHaveBeenCalledTimes(1);
-    expect(onCardHover.mock.calls[0][0]).toMatchObject(movie);
+    expect(onCardHover.mock.calls[0][0]).toMatchObject(Movie);
   });
 });
