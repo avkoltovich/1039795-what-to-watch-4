@@ -1,4 +1,4 @@
-const MOVIES = [
+const movies = [
   {
     title: `Fantastic Beasts: The Crimes of Grindelwald`,
     image: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
@@ -33,10 +33,10 @@ const MOVIES = [
   }
 ];
 
-const PromoMovie = {
-  TITLE: `The Grand Budapest Hotel`,
-  GENRE: `Drama`,
-  YEAR: `2014`,
+const movieCard = {
+  title: `The Grand Budapest Hotel`,
+  genre: `Drama`,
+  year: `2014`,
 };
 
-export {MOVIES, PromoMovie};
+export {movies, movieCard};

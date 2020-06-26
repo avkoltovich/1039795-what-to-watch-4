@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import Main from "./main.jsx";
 
-const MOVIES = [
+const movies = [
   {
     title: `Fantastic Beasts: The Crimes of Grindelwald`,
     image: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
@@ -37,18 +37,18 @@ const MOVIES = [
   }
 ];
 
-const PromoMovie = {
-  TITLE: `The Grand Budapest Hotel`,
-  GENRE: `Drama`,
-  YEAR: `2014`,
+const movieCard = {
+  title: `The Grand Budapest Hotel`,
+  genre: `Drama`,
+  year: `2014`,
 };
 
 describe(`Main`, () => {
   it(`Should Main render correctly`, () => {
     const tree = renderer
       .create(<Main
-        movies={MOVIES}
-        promoMovie={PromoMovie}
+        movies={movies}
+        movieCard={movieCard}
         onTitleLinkClick={() => {}} />)
       .toJSON();
 

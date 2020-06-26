@@ -3,7 +3,7 @@ import renderer from "react-test-renderer";
 import MoviesList from "./movies-list.jsx";
 
 
-const MOVIES = [
+const movies = [
   {
     title: `Fantastic Beasts: The Crimes of Grindelwald`,
     image: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
@@ -42,7 +42,7 @@ describe(`MoviesList`, () => {
   it(`Should MoviesList render correctly`, () => {
     const tree = renderer
       .create(<MoviesList
-        movies={MOVIES}
+        movies={movies}
         onTitleLinkClick={() => {}} />)
       .toJSON();
 
