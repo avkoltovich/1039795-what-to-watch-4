@@ -28,12 +28,12 @@ const MoviePage = () => {
             </div>
           </header>
 
-          <div class="movie-card__wrap">
-            <div class="movie-card__desc">
-              <h2 class="movie-card__title">The Grand Budapest Hotel</h2>
-              <p class="movie-card__meta">
-                <span class="movie-card__genre">Drama</span>
-                <span class="movie-card__year">2014</span>
+          <div className="movie-card__wrap">
+            <div className="movie-card__desc">
+              <h2 className="movie-card__title">The Grand Budapest Hotel</h2>
+              <p className="movie-card__meta">
+                <span className="movie-card__genre">Drama</span>
+                <span className="movie-card__year">2014</span>
               </p>
 
               <div className="movie-card__buttons">
@@ -76,22 +76,22 @@ const MoviePage = () => {
                 </ul>
               </nav>
 
-              <div class="movie-rating">
-                <div class="movie-rating__score">8,9</div>
-                <p class="movie-rating__meta">
-                  <span class="movie-rating__level">Very good</span>
-                  <span class="movie-rating__count">240 ratings</span>
+              <div className="movie-rating">
+                <div className="movie-rating__score">8,9</div>
+                <p className="movie-rating__meta">
+                  <span className="movie-rating__level">Very good</span>
+                  <span className="movie-rating__count">240 ratings</span>
                 </p>
               </div>
 
-              <div class="movie-card__text">
+              <div className="movie-card__text">
                 <p>In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege.</p>
 
                 <p>Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.</p>
 
-                <p class="movie-card__director"><strong>Director: Wes Andreson</strong></p>
+                <p className="movie-card__director"><strong>Director: Wes Andreson</strong></p>
 
-                <p class="movie-card__starring"><strong>Starring: Bill Murray, Edward Norton, Jude Law, Willem Dafoe and other</strong></p>
+                <p className="movie-card__starring"><strong>Starring: Bill Murray, Edward Norton, Jude Law, Willem Dafoe and other</strong></p>
               </div>
             </div>
           </div>
