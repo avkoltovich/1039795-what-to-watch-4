@@ -1,8 +1,6 @@
 import React from "react";
-import Enzyme, {shallow} from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
-import SmallMovieCard from "./small-movie-card.jsx";
-
+import renderer from "react-test-renderer";
+import MoviePage from "./movie-page.jsx";
 
 const Movie = {
   id: 1111,
@@ -20,29 +18,13 @@ const Movie = {
   votes: 240,
 };
 
+describe(`MoviePage`, () => {
+  it(`Should render correctly`, () => {
+    const tree = renderer
+      .create(<MoviePage
+        movieCard={Movie} />)
+      .toJSON();
 
-Enzyme.configure({
-  adapter: new Adapter(),
-});
-
-describe(`SmallMovieCard e2e test`, () => {
-  it(`Should SmallMovieCard be hovered`, () => {
-    const onCardHover = jest.fn((args) => args);
-
-    const mainComponent = shallow(
-        <SmallMovieCard
-          movie={Movie}
-          onTitleLinkClick={() => {}}
-          onCardHover={onCardHover} />
-    );
-
-    const movieCards = mainComponent.find(`.small-movie-card`);
-
-    movieCards.forEach((movieCard) => {
-      movieCard.simulate(`mouseover`, Movie);
-    });
-
-    expect(onCardHover).toHaveBeenCalledTimes(1);
-    expect(onCardHover.mock.calls[0][0]).toMatchObject(Movie);
+    expect(tree).toMatchSnapshot();
   });
 });

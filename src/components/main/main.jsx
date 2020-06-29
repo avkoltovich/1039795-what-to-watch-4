@@ -4,13 +4,13 @@ import React from 'react';
 
 
 const Main = (props) => {
-  const {movies, promoMovie, onTitleLinkClick} = props;
+  const {movies, movieCard, onTitleLinkClick} = props;
 
   return (
     <React.Fragment>
       <section className="movie-card">
         <div className="movie-card__bg">
-          <img src="img/bg-the-grand-budapest-hotel.jpg" alt={promoMovie.TITLE} />
+          <img src="img/bg-the-grand-budapest-hotel.jpg" alt={movieCard.title} />
         </div>
         <h1 className="visually-hidden">WTW</h1>
         <header className="page-header movie-card__head">
@@ -30,13 +30,13 @@ const Main = (props) => {
         <div className="movie-card__wrap">
           <div className="movie-card__info">
             <div className="movie-card__poster">
-              <img src="img/the-grand-budapest-hotel-poster.jpg" alt={`${promoMovie.TITLE} poster`} width={218} height={327} />
+              <img src="img/the-grand-budapest-hotel-poster.jpg" alt={`${movieCard.title} poster`} width={218} height={327} />
             </div>
             <div className="movie-card__desc">
-              <h2 className="movie-card__title">{promoMovie.TITLE}</h2>
+              <h2 className="movie-card__title">{movieCard.title}</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">{promoMovie.GENRE}</span>
-                <span className="movie-card__year">{promoMovie.YEAR}</span>
+                <span className="movie-card__genre">{movieCard.genre}</span>
+                <span className="movie-card__year">{movieCard.year}</span>
               </p>
               <div className="movie-card__buttons">
                 <button className="btn btn--play movie-card__button" type="button">
@@ -121,14 +121,35 @@ const Main = (props) => {
 Main.propTypes = {
   movies: PropTypes.arrayOf(
       PropTypes.shape({
+        id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
+        genre: PropTypes.string.isRequired,
+        year: PropTypes.string.isRequired,
+        starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+        director: PropTypes.string.isRequired,
+        background: PropTypes.string.isRequired,
+        poster: PropTypes.string.isRequired,
+        preview: PropTypes.string.isRequired,
+        description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+        ratingCount: PropTypes.string.isRequired,
+        ratingLevel: PropTypes.string.isRequired,
+        votes: PropTypes.number.isRequired,
       }).isRequired
   ).isRequired,
-  promoMovie: PropTypes.shape({
-    TITLE: PropTypes.string.isRequired,
-    GENRE: PropTypes.string.isRequired,
-    YEAR: PropTypes.string.isRequired,
+  movieCard: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
+    year: PropTypes.string.isRequired,
+    starring: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    director: PropTypes.string.isRequired,
+    background: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired,
+    preview: PropTypes.string.isRequired,
+    description: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    ratingCount: PropTypes.string.isRequired,
+    ratingLevel: PropTypes.string.isRequired,
+    votes: PropTypes.number.isRequired,
   }).isRequired,
   onTitleLinkClick: PropTypes.func.isRequired
 };
