@@ -267,6 +267,7 @@ Array [
             <img
               alt="Fantastic Beasts: The Crimes of Grindelwald"
               height="175"
+              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
               width="280"
             />
           </div>
@@ -292,6 +293,7 @@ Array [
             <img
               alt="Bohemian Rhapsody"
               height="175"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -317,6 +319,7 @@ Array [
             <img
               alt="Aviator"
               height="175"
+              src="img/aviator.jpg"
               width="280"
             />
           </div>
@@ -342,6 +345,7 @@ Array [
             <img
               alt="Shutter Island"
               height="175"
+              src="img/shutter-island.jpg"
               width="280"
             />
           </div>
@@ -367,6 +371,7 @@ Array [
             <img
               alt="Pulp Fiction"
               height="175"
+              src="img/pulp-fiction.jpg"
               width="280"
             />
           </div>
@@ -392,6 +397,7 @@ Array [
             <img
               alt="No Country for Old Men"
               height="175"
+              src="img/no-country-for-old-men.jpg"
               width="280"
             />
           </div>
@@ -417,6 +423,7 @@ Array [
             <img
               alt="Snatch"
               height="175"
+              src="img/snatch.jpg"
               width="280"
             />
           </div>
@@ -442,6 +449,7 @@ Array [
             <img
               alt="Johnny English"
               height="175"
+              src="img/johnny-english.jpg"
               width="280"
             />
           </div>

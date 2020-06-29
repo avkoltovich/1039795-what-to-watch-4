@@ -118,7 +118,8 @@ const movies = [
     ratingCount: `6,2`,
     ratingLevel: `Very good`,
     votes: 300,
-  }];
+  }
+];
 
 const movieCard = {
   id: 1111,
