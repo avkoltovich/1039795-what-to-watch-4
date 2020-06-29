@@ -6,7 +6,7 @@ import SmallMovieCard from "./small-movie-card.jsx";
 
 const Movie = {
   title: `Fantastic Beasts: The Crimes of Grindelwald`,
-  image: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+  preview: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
 };
 
 

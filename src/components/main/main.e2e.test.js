@@ -133,6 +133,10 @@ const movieCard = {
   votes: 240,
 };
 
+Enzyme.configure({
+  adapter: new Adapter(),
+});
+
 describe(`Main e2e test`, () => {
   it(`Should title link be clicked`, () => {
     const titleLinkHandler = jest.fn();
