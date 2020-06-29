@@ -9,7 +9,7 @@ const SmallMovieCard = ({movie, onTitleLinkClick, onCardHover}) => {
       onMouseOver={onCardHover}
     >
       <div className="small-movie-card__image">
-        <img src={movie.image} alt={movie.title} width="280" height="175" />
+        <img src={movie.preview} alt={movie.title} width="280" height="175" />
       </div>
       <h3
         onClick={onTitleLinkClick}
@@ -23,7 +23,7 @@ const SmallMovieCard = ({movie, onTitleLinkClick, onCardHover}) => {
 SmallMovieCard.propTypes = {
   movie: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    preview: PropTypes.string.isRequired,
   }).isRequired,
   onTitleLinkClick: PropTypes.func.isRequired,
   onCardHover: PropTypes.func.isRequired,
